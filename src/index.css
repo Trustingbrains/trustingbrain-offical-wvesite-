@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #A234FD;
+    --color-secondary: #FE7524;
+    --color-bg-dark: #100317;
+    --color-bg-surface: #160E22;
+  }
+
+  body {
+    background-color: #100317;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #100317;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2E1A43;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A234FD;
+  }
+}
+
+/* Glowing text gradients */
+.text-gradient-purple {
+  background: linear-gradient(135deg, #BD6FFD 0%, #A234FD 50%, #FF31AB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FE7524 0%, #FF4C13 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glowing ambient orbs */
+.orb-glow-purple {
+  background: radial-gradient(circle, rgba(162, 52, 253, 0.45) 0%, rgba(119, 26, 153, 0.15) 50%, transparent 70%);
+}
+
+.orb-glow-orange {
+  background: radial-gradient(circle, rgba(254, 117, 36, 0.4) 0%, rgba(255, 76, 19, 0.15) 50%, transparent 70%);
+}
+
+.orb-glow-blue {
+  background: radial-gradient(circle, rgba(43, 59, 161, 0.45) 0%, rgba(116, 137, 229, 0.15) 50%, transparent 70%);
+}
+
+.orb-glow-teal {
+  background: radial-gradient(circle, rgba(37, 117, 108, 0.45) 0%, rgba(173, 231, 225, 0.15) 50%, transparent 70%);
+}
+
+/* Glassmorphism cards */
+.glass-panel {
+  background: rgba(26, 17, 40, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel:hover {
+  border-color: rgba(162, 52, 253, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(162, 52, 253, 0.25);
+}
+
+/* Marquee infinite animation track */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Smooth pulse animation */
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 5s ease-in-out infinite;
+}
+
+/* Keeps a moving highlight visible around each service card. */
+.service-card-shell {
+  isolation: isolate;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.service-card-shell::before {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  z-index: -1;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 285deg,
+    rgba(162, 52, 253, 0.15) 300deg,
+    #a234fd 320deg,
+    #fe7524 335deg,
+    transparent 350deg
+  );
+  animation: serviceCardLight 5s linear infinite;
+}
+
+@keyframes serviceCardLight {
+  to {
+    transform: rotate(360deg);
+  }
+}
