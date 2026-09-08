@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from '../components/home/HeroSection';
 import ClientMarquee from '../components/home/ClientMarquee';
 import ServicesGrid from '../components/home/ServicesGrid';
+import HomeWhatsAppSection from '../components/home/HomeWhatsAppSection';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import CoreValues from '../components/home/CoreValues';
 import SolutionsTabs from '../components/home/SolutionsTabs';
@@ -17,6 +18,7 @@ export default function HomePage() {
       <HeroSection />
       <ClientMarquee />
       <ServicesGrid />
+      <HomeWhatsAppSection />
       <WhyChooseUs />
       <CoreValues />
       <SolutionsTabs />

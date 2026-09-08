@@ -93,6 +93,31 @@ export default function ServicesPage() {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Featured WhatsApp Business API Spotlight */}
+        <AnimatedSection direction="up" delay={0.2}>
+          <div className="mt-12 bg-gradient-to-r from-tb-purple/20 via-[#160E22] to-tb-orange/20 border border-white/15 rounded-3xl p-8 sm:p-10 shadow-2xl backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left">
+              <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#25D366] font-semibold bg-[#25D366]/10 px-3 py-1 rounded-full border border-[#25D366]/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                Featured Platform Solution
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                WhatsApp Business API Solutions
+              </h3>
+              <p className="text-sm text-tb-textMuted max-w-2xl">
+                Connect with customers, manage business conversations and streamline customer communication through WhatsApp Business Platform.
+              </p>
+            </div>
+            <Link
+              to="/whatsapp-business-api"
+              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-tb-purple to-tb-orange text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:shadow-glow-purple hover:scale-105 transition-all shadow-lg shrink-0"
+            >
+              <span>Explore WhatsApp API</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* Engineering Workflow / Methodology with 3D Tilt */}

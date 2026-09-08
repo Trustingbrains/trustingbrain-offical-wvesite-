@@ -182,6 +182,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">Services</h4>
             <ul className="space-y-2.5 text-sm text-tb-textSubtle">
+              <li><Link to="/whatsapp-business-api" className="hover:text-white transition-colors text-white/95 font-medium flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#25D366]"></span>WhatsApp Business API</Link></li>
               <li><Link to="/service/website-development" className="hover:text-white transition-colors">Website Development</Link></li>
               <li><Link to="/service/app-development" className="hover:text-white transition-colors">App Development</Link></li>
               <li><Link to="/service/game-development" className="hover:text-white transition-colors">Game Development</Link></li>
@@ -217,15 +218,19 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright */}
+        {/* Bottom Bar: Copyright & Compliance Links */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-tb-textSubtle">
           <p>{siteData.brand.copyright}</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <Link to="/whatsapp-business-api" className="hover:text-white transition-colors">WhatsApp Business API</Link>
+            <span>•</span>
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span>•</span>
-            <Link to="/facebook-app-privacy" className="hover:text-white transition-colors">Facebook App Privacy</Link>
+            <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms & Conditions</Link>
             <span>•</span>
-            <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="/data-deletion" className="hover:text-white transition-colors">Data Deletion</Link>
+            <span>•</span>
+            <Link to="/contact-us" className="hover:text-white transition-colors">Contact Us</Link>
           </div>
         </div>
       </div>

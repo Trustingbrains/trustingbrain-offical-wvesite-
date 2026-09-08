@@ -16,6 +16,8 @@ import ContactUsPage from './pages/ContactUsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import FacebookAppPrivacyPage from './pages/FacebookAppPrivacyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
+import WhatsAppBusinessApiPage from './pages/WhatsAppBusinessApiPage';
+import DataDeletionPage from './pages/DataDeletionPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -54,12 +56,14 @@ export default function App() {
             <Route path="/our-services" element={<ServicesPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:slug" element={<ServiceDetailPage />} />
+            <Route path="/whatsapp-business-api" element={<WhatsAppBusinessApiPage />} />
             <Route path="/blogs" element={<BlogsPage />} />
             <Route path="/blog/:slug" element={<BlogDetailPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/facebook-app-privacy" element={<FacebookAppPrivacyPage />} />
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/data-deletion" element={<DataDeletionPage />} />
             {/* Fallback to Home */}
             <Route path="*" element={<HomePage />} />
           </Routes>
